@@ -1,0 +1,294 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-style: italic;
+}
+.overall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.homepage{
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    background-color: rgb(150, 150, 150);
+    position: relative;
+    background-image: url("/images/triangle1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+   
+}
+.homepara{
+    width: 540px;
+    margin-left: 60px;
+}
+/* ---------------left content--------------------------- */
+.leftcontent{
+    width: 50%;
+    height: 100%;
+   
+    display: flex;
+    justify-content: center;
+   
+    flex-direction: column;
+}
+.leftcontent>h1{
+    margin-bottom: 20px;
+}
+.btn1{
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 140px;
+    padding: 10px;
+    background-color: rgb(159, 159, 159);
+    border: none;
+    border-radius: 6px;
+    transition-duration: 1s;
+
+}
+.btn1:hover{
+    background-color: burlywood;
+    
+}
+.triangle1{
+    width: 735px;
+    height:735px;
+}
+/* ------------------------right content-------------- */
+.rightcontent{
+    width: 50%;
+    height: 100%;
+ 
+    
+}
+.manwithlog{
+    width: 700px;
+    height: 600px;
+}
+/* ---------------lamps animation style-------------- */
+.lamps{
+    top: 0px;
+    left: 600px;
+    position: absolute;
+    
+}
+.lamp{
+    width: 70px;
+    height: 400px;
+
+
+}
+.lamp1{
+   
+   position: absolute;
+   top: -100px;
+   right: -200px;
+    animation-name: lamp1;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    
+}
+                
+.lamp2{
+   
+   position: absolute;
+   top: -100px;
+   left: 250px;
+    animation-name: lamp2;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+.lamp3{
+   
+   position: absolute;
+   top: -100px;
+   left: 200px;
+    animation-name: lamp3;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+.lamp4{
+   
+   position: absolute;
+   top: -100px;
+   left: 300px;
+    animation-name: lamp4;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+/* ----------------------animation of the lamps-------------- */
+@keyframes lamp1 {
+    0%{
+        top: -200px;
+      }
+      50%{
+        top: -100px;
+      }
+      75%{
+        top: -130px;
+      }
+      100%{
+        top: -70px;
+      }
+}
+@keyframes lamp2 {
+    0%{
+      top: -200px;
+    }
+    50%{
+      top: -100px;
+    }
+    75%{
+      top: -150px;
+    }
+    100%{
+      top: -100px;
+    }
+  }
+  @keyframes lamp3 {
+    0%{
+      top: -200px;
+    }
+    50%{
+      top: -100px;
+    }
+    75%{
+      top: -130px;
+    }
+    100%{
+      top: -170px;
+    }
+  }
+  @keyframes lamp4 {
+    0%{
+      top: -200px;
+    }
+    50%{
+      top: -100px;
+    }
+    75%{
+      top: -130px;
+    }
+    100%{
+      top: 0px;
+    }
+  }
+  /* ----------------sticky navbar----------- */
+  nav{
+    width: 100%;
+    height: 50px;
+    background-color:rgb(150, 150, 150);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    padding: 15px;
+  }
+  nav a{
+    text-decoration: none;
+    color: white;
+  }
+  /* ------------------------section ------------- */
+  section{
+    width: 100%;
+    height: 100vh;
+   padding: 40px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+  }
+  .pic1{
+    width: 450px;
+    height: 450px;
+    padding: 10px;
+  }
+.pic1:hover{
+  transform: scale(1.1);
+}
+/* -------------------footer--------------- */
+footer{
+  width: 100%;
+  height: 200px;
+ background-image: url("../images/landing-footer-bckg.jpg");
+ object-fit: cover;
+  margin-top: 600px;
+  padding: 40px;
+  
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  
+}
+footer a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 7px black;
+}
+/* ----------------responsive------------ */
+@media only screen and  (max-width:1400px){
+  /* .manwithlog{
+    width: 500px;
+    height: 400px;
+} */
+.lamps{
+  display: none;
+}
+.pic1{
+  width: 300px;
+  height: 300px;
+}
+footer{
+  margin-top: 0px;
+}
+}
+
+@media only screen and (min-width:800px) and (max-width:1300px){
+  .homepage{
+    width: 100%;
+    height: 50vh;
+  }
+.homepara{
+  width:auto;
+  height: auto;
+}
+.manwithlog{
+  width:400px;
+  height: 300px;
+
+ 
+}
+.pic1{
+  width: 250px;
+  height: 250px;
+}
+}
+@media only screen and (min-width:320px) and (max-width:800px){
+.homepage{
+  width: 100%;
+  height: 50vh;
+}
+.leftcontent{
+  font-size: 10px
+}
+  nav{
+    font-size: 5px;
+  }
+  .homepara{
+    width: 150px;
+    font-size: 10px;
+  }
+  .manwithlog{
+   display: none;
+  }
+  footer{
+    margin-top: 2000px;
+  }
+  footer a{
+    font-size: 10px;
+  }
+}
